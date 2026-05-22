@@ -99,6 +99,24 @@ export const translations = {
     'faq.title': 'Common Questions',
     'faq.subtitle': 'Everything you need to know about working with KEMET.',
 
+    // FAQ Questions & Answers
+    'faq.q1': 'How much should I spend on ads to see results?',
+    'faq.a1': "Most of our clients start with a minimum of 5,000–10,000 AED per month per platform. The exact amount depends on your industry, target audience size, and goals. We'll recommend a budget during your free strategy call based on what we've seen work for similar businesses in the UAE.",
+    'faq.q2': 'How long does it take to start generating leads?',
+    'faq.a2': "Most campaigns start generating leads within the first week after launch. However, we typically need 2–3 weeks of optimization to stabilize cost per lead and improve lead quality. The first 30 days are focused on testing audiences, creatives, and offers to determine what works best.",
+    'faq.q3': 'What platforms do you advertise on?',
+    'faq.a3': "We manage campaigns across Meta (Facebook & Instagram), Google (Search, Display, YouTube), TikTok, Snapchat, and LinkedIn. Most UAE businesses see the strongest results from Meta and TikTok for B2C, and Google + LinkedIn for B2B. We'll recommend the right mix for your business.",
+    'faq.q4': 'How is lead quality measured and improved?',
+    'faq.a4': "We track lead quality through multiple signals: form completion time, phone number validation, WhatsApp response rate, and booking conversion. Our optimization process focuses on filtering out low-intent leads early and adjusting targeting to attract serious buyers. Most clients see measurable improvement in lead quality within 30 days.",
+    'faq.q5': 'Which industries do you work with?',
+    'faq.a5': "We work with a wide range of businesses across the UAE, including beauty & salons, healthcare clinics, real estate agencies, fitness centers, restaurants, and professional services. Our approach is tailored to each industry's specific customer journey and conversion patterns.",
+    'faq.q6': 'What makes KEMET different from other agencies?',
+    'faq.a6': "We focus on lead quality, not just lead volume. While many agencies optimize for clicks or cheap leads, we optimize for conversion-ready pipeline. Our campaigns are built around WhatsApp-first lead delivery, AI-powered follow-up automation, and daily optimization — not weekly check-ins. We also provide transparent reporting so you always know exactly what's working.",
+    'faq.q7': 'Do you offer guaranteed results?',
+    'faq.a7': "We don't make unrealistic guarantees, but we do commit to continuous optimization and transparent reporting. Our track record shows consistent improvement in both lead volume and lead quality for clients who follow our recommended approach. The free strategy call will give you a clear picture of what we expect to achieve for your specific business.",
+    'faq.q8': 'How do I know if my campaigns are working?',
+    'faq.a8': "We provide weekly performance reports and have a shared dashboard where you can track key metrics in real time: cost per lead, lead volume, lead quality score, and conversion rate. You'll always know exactly where your ad spend is going and what results it's generating.",
+
     // Final CTA
     'finalcta.title': 'Ready to Stop Wasting',
     'finalcta.title-accent': 'Ad Budget',
@@ -215,6 +233,24 @@ export const translations = {
     'faq.badge': 'الأسئلة الشائعة',
     'faq.title': 'أسئلة شائعة',
     'faq.subtitle': 'كل ما تحتاج لمعرفته عن العمل مع KEMET.',
+
+    // FAQ Questions & Answers - Arabic
+    'faq.q1': 'كم يجب أن أنفق على الإعلانات لرؤية النتائج؟',
+    'faq.a1': 'معظم عملائنا يبدأون بمبلغ لا يقل عن ٥,٠٠٠–١٠,٠٠٠ درهم إماراتي شهرياً لكل منصة. المبلغ الدقيق يعتمد على مجال عملك وحجم الجمهور المستهدف وأهدافك. سنوصي بميزانية مناسبة خلال الاستشارة الاستراتيجية المجانية.',
+    'faq.q2': 'كم من الوقت يستغرق بدء توليد العملاء المحتملين؟',
+    'faq.a2': 'معظم الحملات تبدأ في توليد العملاء المحتملين خلال الأسبوع الأول بعد الإطلاق. لكننا نحتاج عادةً إلى ٢–٣ أسابيع من التحسين لتثبيت تكلفة العميل المحتمل وتحسين جودته.',
+    'faq.q3': 'ما هي المنصات التي تعلن عليها؟',
+    'faq.a3': 'ندير حملات على ميتا (فيسبوك وإنستغرام)، وغوغل (بحث، عرض، يوتيوب)، وتيك توك، وسناب شات، ولينكد إن. معظم الشركات في الإمارات تحصل على أفضل النتائج من ميتا وتيك توك للأعمال التجارية للمستهلك.',
+    'faq.q4': 'كيف يتم قياس جودة العملاء المحتملين وتحسينها؟',
+    'faq.a4': 'نتتبع جودة العملاء المحتملين من خلال إشارات متعددة: وقت إكمال النموذج، التحقق من رقم الهاتف، معدل الاستجابة على واتساب، وتحويل الحجوزات.',
+    'faq.q5': 'ما هي القطاعات التي تعملون معها؟',
+    'faq.a5': 'نعمل مع مجموعة واسعة من الشركات في جميع أنحاء الإمارات، بما في ذلك التجميل والصالونات، والعيادات الصحية، ووكالات العقارات، ومراكز اللياقة البدنية، والمطاعم، والخدمات المهنية.',
+    'faq.q6': 'ما الذي يميز KEMET عن غيرها من الوكالات؟',
+    'faq.a6': 'نركز على جودة العملاء المحتملين، وليس فقط حجمهم. حملاتنا مبنية على تسليم العملاء عبر واتساب أولاً، وأتمتة المتابعة، والتحسين اليومي — وليس المراجعات الأسبوعية.',
+    'faq.q7': 'هل تقدمون نتائج مضمونة؟',
+    'faq.a7': 'نحن لا نقدم ضمانات غير واقعية، لكننا نلتزم بالتحسين المستمر والتقارير الشفافة. سجلنا يظهر تحسناً مستمراً في كل من حجم وجودة العملاء المحتملين للعملاء الذين يتبعون نهجنا.',
+    'faq.q8': 'كيف أعرف أن حملاتي تعمل؟',
+    'faq.a8': 'نقدم تقارير أداء أسبوعية ولدينا لوحة تحكم مشتركة حيث يمكنك تتبع المقاييس الرئيسية في الوقت الفعلي: تكلفة العميل المحتمل، حجم العملاء المحتملين، جودة العملاء المحتملين، ومعدل التحويل.',
 
     // Final CTA
     'finalcta.title': 'هل أنت مستعد للتوقف عن إهدار',

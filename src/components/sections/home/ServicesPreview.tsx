@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import SectionHeader from '@/components/ui/SectionHeader';
 import Button from '@/components/ui/Button';
 import { useBookCall } from '@/contexts/BookCallContext';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { t } from '@/lib/translations';
 
 const services = [
   {
@@ -27,7 +29,7 @@ const services = [
   },
   {
     title: 'TikTok Ads',
-    description: 'High-engagement campaigns reaching UAE audiences through TikTok\'s powerful algorithm. Creative-first approach optimized for lead generation and brand awareness.',
+    description: 'High-engagement campaigns reaching UAE audiences through TikTok\'s powerful algorithm. Creative-first approach optimized for lead generation.',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0" />
@@ -65,16 +67,18 @@ const services = [
 
 const ServicesPreview: React.FC = () => {
   const { openBookCall } = useBookCall();
+  const { lang, dir } = useLanguage();
+  const isRTL = dir === 'rtl';
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden" id="services">
+    <section className="relative py-24 md:py-32 overflow-hidden" id="services" dir={dir}>
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] via-[#0d1a30] to-[#0a1628]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(16,185,129,0.03)_0%,transparent_60%)]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
         <SectionHeader
-          badge="OUR SERVICES"
-          title="Full-Funnel Lead Generation"
-          subtitle="From ad creative to WhatsApp conversion — we manage the entire lead generation process for UAE businesses."
+          badge={t('services.badge', lang)}
+          title={t('services.title', lang)}
+          subtitle={t('services.subtitle', lang)}
         />
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -89,8 +93,8 @@ const ServicesPreview: React.FC = () => {
             >
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-emerald-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-              <div className="relative z-10 flex flex-col gap-4">
-                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/15 flex items-center justify-center text-emerald-400">
+              <div className={`relative z-10 flex ${isRTL ? 'flex-row-reverse' : ''} gap-4`}>
+                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/15 flex items-center justify-center text-emerald-400 flex-shrink-0">
                   {service.icon}
                 </div>
                 <div>
@@ -110,7 +114,7 @@ const ServicesPreview: React.FC = () => {
           className="flex justify-center mt-12"
         >
           <Button onClick={openBookCall} variant="primary" arrow>
-            Book a Free Strategy Call
+            {t('services.cta', lang)}
           </Button>
         </motion.div>
       </div>
