@@ -105,7 +105,7 @@ const BookCallModal: React.FC<BookCallModalProps> = ({ isOpen, onClose }) => {
       .map(f => `${f.label}\n${formData[f.id] || '—'}`)
       .join('\n\n');
 
-    // Send email via PHP mailer
+    // Send email via Next.js API
     try {
       const formPayload = new FormData();
       formPayload.append('subject', 'New Strategy Call Request');
@@ -113,7 +113,7 @@ const BookCallModal: React.FC<BookCallModalProps> = ({ isOpen, onClose }) => {
       formPayload.append('from_email', formData['email'] || 'noreply@kemetads.ae');
       formPayload.append('message', message);
 
-      await fetch('/mailer.php', {
+      await fetch('/api/contact', {
         method: 'POST',
         body: formPayload,
       });

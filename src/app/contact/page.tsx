@@ -83,7 +83,7 @@ const ContactPage = () => {
     setFormStatus('sending');
 
     try {
-      // Send to email via PHP mailer
+// Send to email via Next.js API
       const message = `Name: ${formState.fullName}\nWhatsApp: ${formState.whatsappNumber}\nBusiness Type: ${formState.businessType}\nMonthly Budget: ${formState.monthlyBudget}\nChallenge: ${formState.currentChallenges}`;
 
       const formData = new FormData();
@@ -92,7 +92,7 @@ const ContactPage = () => {
       formData.append('from_email', 'noreply@kemetads.ae');
       formData.append('message', message);
 
-      const res = await fetch('/mailer.php', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         body: formData,
       });
