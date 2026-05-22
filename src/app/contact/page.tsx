@@ -83,11 +83,25 @@ const ContactPage = () => {
     setFormStatus('sending');
 
     try {
-      // Send to email
-      const mailBody = `Campaign Review Request\n\nName: ${formState.fullName}\nWhatsApp: ${formState.whatsappNumber}\nBusiness Type: ${formState.businessType}\nMonthly Budget: ${formState.monthlyBudget}\nChallenge: ${formState.currentChallenges}`;
-      
-      // Send via mailto
-      window.location.href = `mailto:abdulrahman@kemetads.ae?subject=Campaign Review Request&body=${encodeURIComponent(mailBody)}`;
+      // Send to email via PHP mailer
+      const message = `Name: ${formState.fullName}\nWhatsApp: ${formState.whatsappNumber}\nBusiness Type: ${formState.businessType}\nMonthly Budget: ${formState.monthlyBudget}\nChallenge: ${formState.currentChallenges}`;
+
+      const formData = new FormData();
+      formData.append('subject', 'Campaign Review Request');
+      formData.append('from_name', formState.fullName);
+      formData.append('from_email', 'noreply@kemetads.ae');
+      formData.append('message', message);
+
+      const res = await fetch('/mailer.php', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await res.json();
+
+      if (!result.success) {
+        throw new Error('Failed to send');
+      }
 
       setFormStatus('sent');
 

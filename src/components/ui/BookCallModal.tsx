@@ -100,15 +100,26 @@ const BookCallModal: React.FC<BookCallModalProps> = ({ isOpen, onClose }) => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const message = formFields
       .map(f => `${f.label}\n${formData[f.id] || '—'}`)
       .join('\n\n');
 
-    // Send email via mailto
-    const emailSubject = encodeURIComponent('New Strategy Call Request');
-    const emailBody = encodeURIComponent(`📋 New Strategy Call Request\n\n${message}`);
-    window.open(`mailto:abdulrahman@kemetads.ae?subject=${emailSubject}&body=${emailBody}`, '_blank');
+    // Send email via PHP mailer
+    try {
+      const formPayload = new FormData();
+      formPayload.append('subject', 'New Strategy Call Request');
+      formPayload.append('from_name', formData['name'] || 'Website Visitor');
+      formPayload.append('from_email', formData['email'] || 'noreply@kemetads.ae');
+      formPayload.append('message', message);
+
+      await fetch('/mailer.php', {
+        method: 'POST',
+        body: formPayload,
+      });
+    } catch (e) {
+      // Email failed, still proceed to WhatsApp
+    }
 
     const whatsappUrl = `https://wa.me/971501412159?text=${encodeURIComponent(
       `📋 *New Strategy Call Request*\n\n${message}`
