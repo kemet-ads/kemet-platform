@@ -333,6 +333,12 @@ pre {
   overflow: auto;
 }
 
+/* ==== ARABIC FONT ==== */
+html[dir="rtl"] body,
+html[dir="rtl"] * {
+  font-family: var(--font-cairo), system-ui, -apple-system, sans-serif;
+}
+
 /* ==== RTL SUPPORT ==== */
 html[dir="rtl"] .rtl-flip {
   transform: scaleX(-1);
@@ -344,6 +350,14 @@ html[dir="rtl"] .nav-links {
 
 html[dir="rtl"] .hero-gradient {
   background: linear-gradient(135deg, #00E5A8 0%, #00C893 100%);
+}
+
+html[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+html[dir="rtl"] .text-right {
+  text-align: left;
 }
 
 /* ==== HONEYPOT ANTI-SPAM FIELD ==== */
