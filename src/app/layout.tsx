@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { BookCallProvider } from "@/contexts/BookCallContext";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -140,7 +141,7 @@ gtag('config', 'G-Z90B5RX9V7');`,
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#0a1628] text-white">
+      <body className="min-h-full flex flex-col bg-[#050e1a] text-white">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -152,9 +153,11 @@ gtag('config', 'G-Z90B5RX9V7');`,
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-        <BookCallProvider>
-          {children}
-        </BookCallProvider>
+        <LanguageProvider>
+          <BookCallProvider>
+            {children}
+          </BookCallProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

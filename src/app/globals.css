@@ -333,6 +333,19 @@ pre {
   overflow: auto;
 }
 
+/* ==== RTL SUPPORT ==== */
+html[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .nav-links {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero-gradient {
+  background: linear-gradient(135deg, #00E5A8 0%, #00C893 100%);
+}
+
 /* ==== HONEYPOT ANTI-SPAM FIELD ==== */
 .hidden-field {
   position: absolute;
