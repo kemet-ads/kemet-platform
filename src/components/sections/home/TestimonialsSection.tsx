@@ -6,19 +6,19 @@ import SectionHeader from '@/components/ui/SectionHeader';
 
 const testimonials = [
   {
-    quote: "KEMET transformed our acquisition pipeline. We went from inconsistent leads to a predictable flow of qualified meetings every single week. Our revenue doubled in 90 days.",
+    quote: "KEMET rebuilt our entire acquisition system. We went from inconsistent leads to a predictable flow of qualified meetings every week. Our revenue doubled within 90 days of working with them.",
     author: 'Marcus Chen',
     role: 'CEO, Nexus Ventures',
     metric: '2.1x revenue in 90 days',
   },
   {
-    quote: "We were burning $40k/month on ads with no clear ROI. KEMET rebuilt our entire system. Now we know exactly what works and our CPL dropped by 55% in two months.",
+    quote: "We were spending AED 40k/month on ads with no clear ROI. KEMET reworked our targeting, creatives, and lead flow. Our cost per lead dropped by 55% and we started booking real meetings.",
     author: 'Sarah Mitchell',
     role: 'VP Growth, ScaleUp Labs',
     metric: '55% lower CPL',
   },
   {
-    quote: "The AI follow-up system alone was a game changer. We went from losing 80% of leads to recovering 40% of them automatically. It's like having a 24/7 sales team.",
+    quote: "The WhatsApp lead flow alone changed everything. We went from losing 80% of leads to capturing and qualifying them automatically. It's like having a 24/7 sales team that never sleeps.",
     author: 'David Park',
     role: 'Founder, ArcLight Capital',
     metric: '40% lead recovery rate',
@@ -33,9 +33,9 @@ const TestimonialsSection: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
         <SectionHeader
-          badge="Testimonials"
-          title="Trusted by business leaders"
-          subtitle="See what our clients say about working with KEMET."
+          badge="TESTIMONIALS"
+          title="Trusted by Business Leaders"
+          subtitle="Real results from real clients across the UAE."
         />
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
