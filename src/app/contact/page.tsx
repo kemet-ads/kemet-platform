@@ -83,11 +83,11 @@ const ContactPage = () => {
     setFormStatus('sending');
 
     try {
-      // Send to sales email
+      // Send to email
       const mailBody = `Campaign Review Request\n\nName: ${formState.fullName}\nWhatsApp: ${formState.whatsappNumber}\nBusiness Type: ${formState.businessType}\nMonthly Budget: ${formState.monthlyBudget}\nChallenge: ${formState.currentChallenges}`;
       
-      // Send via mailto as fallback
-      window.location.href = `mailto:sales@kemetads.ae?subject=Campaign Review Request&body=${encodeURIComponent(mailBody)}`;
+      // Send via mailto
+      window.location.href = `mailto:abdulrahman@kemetads.ae?subject=Campaign Review Request&body=${encodeURIComponent(mailBody)}`;
 
       setFormStatus('sent');
 
@@ -620,7 +620,7 @@ const ContactPage = () => {
 
             {/* Email Card */}
             <motion.a
-              href="mailto:sales@kemetads.ae"
+              href="mailto:abdulrahman@kemetads.ae"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -639,7 +639,7 @@ const ContactPage = () => {
                   <p className="text-xs text-zinc-500 mt-1">For partnerships & business inquiries</p>
                 </div>
                 <div className="flex items-center gap-1 text-[10px] text-emerald-400 group-hover:gap-2 transition-all duration-300">
-                  <span>sales@kemetads.ae</span>
+                  <span>abdulrahman@kemetads.ae</span>
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>

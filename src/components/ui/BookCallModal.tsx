@@ -104,6 +104,12 @@ const BookCallModal: React.FC<BookCallModalProps> = ({ isOpen, onClose }) => {
     const message = formFields
       .map(f => `${f.label}\n${formData[f.id] || '—'}`)
       .join('\n\n');
+
+    // Send email via mailto
+    const emailSubject = encodeURIComponent('New Strategy Call Request');
+    const emailBody = encodeURIComponent(`📋 New Strategy Call Request\n\n${message}`);
+    window.open(`mailto:abdulrahman@kemetads.ae?subject=${emailSubject}&body=${emailBody}`, '_blank');
+
     const whatsappUrl = `https://wa.me/971501412159?text=${encodeURIComponent(
       `📋 *New Strategy Call Request*\n\n${message}`
     )}`;
